@@ -1,11 +1,7 @@
 # startup
 
-Hello! These are my first changes from VS Code!!
+# **Elevator Pitch**
 
-Here are my second changes made FROM GitHub
+Imagine a game with multiple possibilities. You and your friends play the same game, but end up with completely different results. My application is a choose your own adventure game, in the wilds of the Amazon Jungle. "Jungle Mania" is a game where your choices determine your destiny. A prompt will appear, with two choices you can take. You login, play the game, and can compare your results with friends.
 
-Here is my merge *conflict* in github haha
-
-Here is my merge *conflict* in VSCode!
-
-**Final Note**: This assignment definitely helped me understand commit versus push and pull. I was very confused when I started, but now after going to the TA lab too and working through I understand much better how VSCode and GitHub works.
+# **Rough Sketch**
