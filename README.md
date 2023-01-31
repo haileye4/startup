@@ -6,3 +6,9 @@ Imagine a game with multiple possibilities. You and your friends play the same g
 
 # **Rough Sketch**
 ![image](https://user-images.githubusercontent.com/123395871/215238309-f233773a-ca9d-4d43-a107-2fd84d5763cb.png)
+
+# Amazon web services
+My IP Address is **http://52.14.201.106**
+
+The command to remote shell is ➜  ssh -i [key pair file] ubuntu@[ip address]
+*example*: ➜  ssh -i ~/keys/production.pem ubuntu@53.104.2.123
