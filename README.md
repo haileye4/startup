@@ -15,3 +15,6 @@ The command to remote shell is ➜  ssh -i [key pair file] ubuntu@[ip address]
 
 ## What I have learned from my Simon html:
 I learned more in-depth about paragraphs, divisions, body and headers, and the href argument to include hyperlinks to other html files. This is all completely new to me since I have never worked in html before. I also thought the table sections all starting with t were really interesting, and helpful in organizing the different information stored.
+
+To deploy files from terminal into my website, do 
+./deployFiles.sh -k "C:\Users\haile\CS260\happy.pem" -h startup.haileyjohnson.click -s startup
