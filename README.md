@@ -18,3 +18,6 @@ I learned more in-depth about paragraphs, divisions, body and headers, and the h
 
 To deploy files from terminal into my website, do 
 ./deployFiles.sh -k "C:\Users\haile\CS260\happy.pem" -h startup.haileyjohnson.click -s startup
+
+## Bootstrap Helpful link: https://www.w3schools.com/bootstrap/bootstrap_tables.asp
+The link provided helped me a lot in understanding different bootstrap classes!
