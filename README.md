@@ -26,3 +26,9 @@ To deploy files for Simon:
 
 ## Bootstrap Helpful link: https://www.w3schools.com/bootstrap/bootstrap_tables.asp
 The link provided helped me a lot in understanding different bootstrap classes!
+
+CSS what I have learned:
+It becomes super easy to adjust the fonts and colors in your application by clarifying font sizes and colros in a CSS ID or class you have defined. Same thing with backgrounds. I also realized the differences between padding, borders, and margins once I started manipulating out all the different components in CSS.
+
+HTML what I have learned:
+I learned a lot of skills implementing forms, tables, and manipulating buttons and inputs with bootstrap in HTML. It took me a while to realize the head of the HTML file doesn't actually appear on the page, and the main and footer were fun to manipulate. 
