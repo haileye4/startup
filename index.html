@@ -20,39 +20,41 @@
 
   <body class="bg-dark text-light">
     
-    <header class="container-fluid">
-      <nav class="navbar fixed-top navbar-dark">
-        <a class="navbar-brand" href="#">Startup<sup>&reg;</sup></a>
+    <header class="container-fluid text-light">
+      <nav class="navbar navbar-light fixed-top" style="background-color: #034e00;">
+        <a class="navbar-brand text-light" href="#">Startup Game</a>
         <menu class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" href="index.html">Home</a>
+            <a class="nav-link active text-light" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="play.html">Play</a>
+            <a class="nav-link text-light" href="play.html">Play</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="scores.html">Scores</a>
+            <a class="nav-link text-light" href="scores.html">Scores</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link text-light" href="about.html">About</a>
           </li>
         </menu>
       </nav>
     </header>
 
-    <main class="container-fluid bg-secondary text-center">
+    <main class="container-fluid text-center" id="jungleBackground">
       <div>
-        <h1>Welcome</h1>
-        <p>Login to play</p>
+        <h1 class="text-dark container-fluid text-center" id="box1">Welcome to Jungle Mania!</h1>
+        <p class="text-light" style = "font-size: 1.6em;"><b>Login to play</b></p>
+        
+
         <form method="get" action="play.html">
           <input type="text" id="name" placeholder="Your name here" />
-          <button type="submit" class="btn btn-primary">Login</button>
+          <button type="submit" class="btn btn-success">Login</button>
         </form>
       </div>
     </main>
 
-    <footer class="bg-dark text-dark text-muted">
-      <div class="container-fluid">
+    <footer class="bg-dark text-dark text-muted sticky-bottom">
+      <div class="container-fluid text-light" style="background-color: #034e00;">
         <span class="text-reset">Author: Hailey Johnson</span>
         <a
           class="text-reset"
