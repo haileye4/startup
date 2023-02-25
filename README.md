@@ -18,3 +18,11 @@ I learned more in-depth about paragraphs, divisions, body and headers, and the h
 
 To deploy files from terminal into my website, do 
 ./deployFiles.sh -k "C:\Users\haile\CS260\happy.pem" -h startup.haileyjohnson.click -s startup
+
+## Simon CSS Assignment:
+To deploy files for Simon:
+./deployFiles.sh -k "C:\Users\haile\CS260\happy.pem" -h simon.haileyjohnson.click -s simon
+ Honestly, playing the simon game looked super complex. I didn't realize it was really just a division with organized buttons within it. The CSS made it super clearer to understand. This also helped me understand the difference betwene padding, borders, and margins.
+
+## Bootstrap Helpful link: https://www.w3schools.com/bootstrap/bootstrap_tables.asp
+The link provided helped me a lot in understanding different bootstrap classes!
