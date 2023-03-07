@@ -32,3 +32,7 @@ It becomes super easy to adjust the fonts and colors in your application by clar
 
 HTML what I have learned:
 I learned a lot of skills implementing forms, tables, and manipulating buttons and inputs with bootstrap in HTML. It took me a while to realize the head of the HTML file doesn't actually appear on the page, and the main and footer were fun to manipulate. 
+
+## Things I learned from Simon Javascript:
+There are actually tons of techniques I've learned about, and more I will learn as I implement them into my startup and practice... Queryselector is a powerful fucntion, but use queryselectALL when wanting to select every element in an HTML...
+CreateElement is also another valuable function the Simon JavaScript files implement to manipulate the DOM and insert new scores in after a player has a score.
