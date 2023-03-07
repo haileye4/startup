@@ -42,7 +42,7 @@
     <main class="bg-secondary" id="jungleBackground">
       <div class="players">
         Player:
-        <span class="player-name">Mystery player</span>
+        <span class="player-name"></span>
       </div>
       <div class="game" style="text-align: center;">
         <p> NUMBER 1 RULESSSSS
@@ -50,8 +50,8 @@
         <p>Wise decision player. Since you picked the good route, you get the nice results. Okay, </p>
         <p>Which ending do you want?</p>
         <div class="text-center" role="group">
-          <button type="button" class="btn btn-success btn-large">You fall down a hole leading to a tropical cave full of Mayan treasure.</button>
-          <button type="button" class="btn btn-success btn-large">You befriend an alpha gorilla, and become the modern Tarzan living with him all your days in glory.</button>
+          <button type="button" id="result" class="btn btn-success btn-large" onclick="game.saveEnding(this)">You fall down a hole leading to a tropical cave full of Mayan treasure.</button>
+          <button type="button" id="result" class="btn btn-success btn-large" onclick="game.saveEnding(this)">You befriend an alpha gorilla, and become the modern Tarzan living with him all your days in glory.</button>
         </div>
       </div>
       </main>
@@ -66,6 +66,6 @@
           >
         </div>
       </footer>
-      
+      <script src="play.js"></script>
   </body>
 </html>
