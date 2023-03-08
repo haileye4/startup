@@ -33,4 +33,8 @@ function loadResults() {
   }
   
 loadResults();
-  
+
+function resetScores() {
+  const blank = [];
+  localStorage.setItem('allResults', JSON.stringify(blank));
+}

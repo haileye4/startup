@@ -8,6 +8,7 @@ function retrieveResult() {
     
     resultEl.textContent = lastResult.ending;
     section.appendChild(resultEl);
+
   }
 
   retrieveResult();

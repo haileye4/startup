@@ -49,8 +49,10 @@
         <p>Interesting...</p>
         <p>Well, pick your story ending right now. Do you...</p>
         <div class="text-center" role="group">
-          <button type="button" class="btn btn-success btn-large" onclick="game.saveEnding(this)">Suffocate in quicksand</button>
-          <button type="button" class="btn btn-success btn-large" onclick="game.saveEnding(this)">Get eaten by a tiger</button>
+          <button type="button" class="btn btn-success btn-large" onclick="location.href = 'ending.html'; 
+          game.pressButton('Suffocated in quicksand.')">Suffocate in quicksand</button>
+          <button type="button" class="btn btn-success btn-large" onclick="location.href = 'ending.html'; 
+          game.pressButton('Got eaten by a large tiger.')">Get eaten by a tiger</button>
         </div>
       </div>
       </main>
