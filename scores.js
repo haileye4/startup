@@ -32,5 +32,5 @@ function loadResults() {
     }
   }
   
-  loadResults();
+loadResults();
   

@@ -2,8 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Tell browsers not to scale the viewport automatically -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Scores</title>
+    <title>Startup</title>
     <link rel="icon" href="favicon.ico" />
 
     <link rel="stylesheet" href="main.css" />
@@ -16,6 +17,7 @@
       crossorigin="anonymous"
     />
   </head>
+  
   <body class="bg-dark text-light">
     <header class="container-fluid text-light">
       <nav class="navbar navbar-light fixed-top" style="background-color: #034e00;">
@@ -37,31 +39,30 @@
       </nav>
     </header>
 
-    <main class="container-fluid text-center" id="jungleBackground">
-      <table class="table table-dark table-hover" id="random">
-        <thead class="table-dark">
-          <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Ending</th>
-            <th>Date</th>
-          </tr>
-        </thead>
-        <tbody id="results">
-        </tbody>
-      </table>
-    </main>
-
-    <footer class="bg-dark text-dark text-muted sticky-bottom">
-      <div class="container-fluid text-light" style="background-color: #034e00;">
-        <span class="text-reset">Author: Hailey Johnson</span>
-        <a
-          class="text-reset"
-          href="https://github.com/haileye4/startup"
-          >My Source</a
-        >
+    <main class="bg-secondary" id="jungleBackground">
+      <div class="players">
+        Player:
+        <span class="player-name"></span>
       </div>
-    </footer>
-    <script src="scores.js"></script>
+      <div class="game" id="result" style="text-align: center;">
+        <p>THE END.</p>
+        <p>Nice work! At the end, you...</p>
+      </div>
+      <div>
+        Click here to see all results.
+      </div>
+      </main>
+
+      <footer class="bg-dark text-dark text-muted sticky-bottom">
+        <div class="container-fluid text-light" style="background-color: #034e00;">
+          <span class="text-reset">Author: Hailey Johnson</span>
+          <a
+            class="text-reset"
+            href="https://github.com/haileye4/startup"
+            >My Source</a
+          >
+        </div>
+      </footer>
+      <script src="ending.js"></script>
   </body>
 </html>
