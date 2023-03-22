@@ -50,3 +50,6 @@ function resetScores() {
   const blank = [];
   localStorage.setItem('allResults', JSON.stringify(blank));
 }
+
+## Simon Service Assignment
+This assignment helped me understand the differences between the front end, and hosting endpoint for the back end applications.
