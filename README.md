@@ -36,3 +36,17 @@ I learned a lot of skills implementing forms, tables, and manipulating buttons a
 ## Things I learned from Simon Javascript:
 There are actually tons of techniques I've learned about, and more I will learn as I implement them into my startup and practice... Queryselector is a powerful fucntion, but use queryselectALL when wanting to select every element in an HTML...
 CreateElement is also another valuable function the Simon JavaScript files implement to manipulate the DOM and insert new scores in after a player has a score.
+
+## Things I have learned from my startup JavaScript:
+I learned a ton practicing storing items in the local storage of the server, and using maps just like I would use an array in C++. It took me a while to figure out how to output the personal outcome of a player to the screen after a player has finished the game, but I realized querySelector and creating element with a text content was powerful in outputting strings as follows:
+    const section = document.querySelector('#result');
+    const resultEl = document.createElement('p');
+    
+    resultEl.textContent = lastResult.ending;
+    section.appendChild(resultEl);
+    
+I also spent a lot of time learning how to reset the scores, cause it would take up so much space and stop after 10 and then you couldn't put any new scores in... The following code was really helpfuyl in resetting the object in the local storage so I could do that:
+function resetScores() {
+  const blank = [];
+  localStorage.setItem('allResults', JSON.stringify(blank));
+}
