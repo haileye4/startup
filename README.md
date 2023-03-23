@@ -52,4 +52,5 @@ function resetScores() {
 }
 
 ## Simon Service Assignment
-This assignment helped me understand the differences between the front end, and hosting endpoint for the back end applications.
+This assignment helped me understand the differences between the front end, and hosting endpoint for the back end applications. 
+It finally clicked when I was working through the video and setting up my service for my startup that express,static('public') will look into my public file and serve up my index.html file along with all my other ones!
