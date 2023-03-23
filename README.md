@@ -52,7 +52,8 @@ function resetScores() {
 }
 
 ## Simon Service Assignment
-This assignment helped me understand the differences between the front end, and hosting endpoint for the back end applications. I also remember to reinstall the express module using **npm install express**
+This assignment helped me understand the differences between the front end, and hosting endpoint for the back end applications. I also remember to reinstall the express module using **npm install express**.
+
 It finally clicked when I was working through the video and setting up my service for my startup that express,static('public') will look into my public file and serve up my index.html file along with all my other ones!
 
 When I applied this to my startup, it was super cool to see how i could run node index.js in my console and serve up my service through the JavaScript interpretor.
