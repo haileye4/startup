@@ -6,7 +6,7 @@ function retrieveResult() {
     const section = document.querySelector('#result');
     const resultEl = document.createElement('p');
     
-    resultEl.textContent = lastResult.ending;
+    resultEl.textContent = lastResult.result;
     section.appendChild(resultEl);
 
   }

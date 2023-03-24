@@ -35,7 +35,7 @@ async function loadResults() {
   
         positionTdEl.textContent = i + 1;
         nameTdEl.textContent = result.name;
-        resultTdEl.textContent = result.ending;
+        resultTdEl.textContent = result.result;
         dateTdEl.textContent = result.date;
   
         const rowEl = document.createElement('tr');
