@@ -1,10 +1,29 @@
-function loadResults() {
+async function loadResults() {
     let results = [];
-    const resultsText = localStorage.getItem('allResults');
-    if (resultsText) {
-      results = JSON.parse(resultsText);
-    }
+    //const resultsText = localStorage.getItem('allResults');
+    //if (resultsText) {
+    //  results = JSON.parse(resultsText);
+    //}
   
+    try {
+      // Get the latest high scores from the service
+      const response = await fetch('/api/results');
+      results = await response.json();
+  
+      // Save the scores in case we go offline in the future
+      localStorage.setItem('allResults', JSON.stringify(results));
+    } catch {
+      // If there was an error then just use the last saved scores
+      const resultsText = localStorage.getItem('allResults');
+      if (resultsText) {
+        results = JSON.parse(resultsText);
+      }
+    }
+
+    displayResults(results);
+  }
+
+  function displayResults(results) {
     const tableBodyEl = document.querySelector('#results');
   
     if (results.length) {
