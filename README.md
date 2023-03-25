@@ -57,3 +57,6 @@ This assignment helped me understand the differences between the front end, and 
 It finally clicked when I was working through the video and setting up my service for my startup that express,static('public') will look into my public file and serve up my index.html file along with all my other ones!
 
 When I applied this to my startup, it was super cool to see how i could run node index.js in my console and serve up my service through the JavaScript interpretor.
+
+## Simon Database Assignment
+I learned a ton about applying mongoDB. Resetting my environment variables amd actually setting up my database took a bit of time to understand. 
