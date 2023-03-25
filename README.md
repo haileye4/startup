@@ -60,3 +60,4 @@ When I applied this to my startup, it was super cool to see how i could run node
 
 ## Simon Database Assignment
 I learned a ton about applying mongoDB. Resetting my environment variables amd actually setting up my database took a bit of time to understand. 
+The .insertOne() function is very simple and easy to inset a json object into the mongo database.
