@@ -60,4 +60,19 @@ When I applied this to my startup, it was super cool to see how i could run node
 
 ## Simon Database Assignment
 I learned a ton about applying mongoDB. Resetting my environment variables amd actually setting up my database took a bit of time to understand. 
-The .insertOne() function is very simple and easy to inset a json object into the mongo database.
+The .insertOne() function is very simple and easy to inset a json object into the mongo database. 
+
+## Simon Login Assignment
+This function  uses a secure cookie to store the authorization token for an authenticated user. 
+function setAuthCookie(res, authToken) {
+  res.cookie(authCookieName, authToken, {
+    secure: true,
+    httpOnly: true,
+    sameSite: 'strict',
+  });
+  
+  When a user is logged in, the cookie is added. When a user makes a secure request, the cookie is checked. When the user logs out, the cookie is removed.
+  
+  .findOne() is looking for a key in the mongo database... whileinsert.One() puts values into the mongo database.
+  bcrypt.hash(password, 10); -> This function is used to HASH our password we create...
+}
