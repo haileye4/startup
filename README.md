@@ -80,3 +80,6 @@ function setAuthCookie(res, authToken) {
 
 ## Simon WebSocket
 Websocket is how two clinets can interact with each other... force the browser to do something based on your backend... It's pinging the server to see if it has anything to say.
+1. Need to load in the webSocket package with const{ WebSocketServer } = require('ws')
+2. const wss = new WebSocketServer({ noServer: true }); this uses http, or the existing communication set up, to upgrade and create a new connection from that. Say you are going to create your own server.
+Simon uses WebSocket with peerproxy.js!  Simply just shows who is all playing and scoring at the same time... Prof. Jensen designed a class called PeerProxy which sets up the websocket, then makes and pushes connections with connectuons.push()... then bring in peer proxy into index.js and starts new PeerProxy(httpService);
