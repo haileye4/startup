@@ -76,3 +76,7 @@ function setAuthCookie(res, authToken) {
   .findOne() is looking for a key in the mongo database... whileinsert.One() puts values into the mongo database.
   bcrypt.hash(password, 10); -> This function is used to HASH our password we create...
 }
+
+
+## Simon WebSocket
+Websocket is how two clinets can interact with each other... force the browser to do something based on your backend... It's pinging the server to see if it has anything to say.
