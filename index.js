@@ -17,12 +17,12 @@ app.use(`/api`, apiRouter);
 
 // GetScores - THESE ARE FOR DATABASE!
 apiRouter.get('/allResults', async (_req, res) => {
-  const results = await DB.getRecentResults();
+  const allResults = await DB.getRecentResults();
   res.send(allResults);
 });
 
 // SubmitScore
-apiRouter.post('/allResults', async (req, res) => {
+apiRouter.post('/result', async (req, res) => {
   DB.addResult(req.body);
   const allResults = await DB.getRecentResults();
   res.send(allResults);
