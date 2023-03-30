@@ -16,13 +16,13 @@ var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
 // GetScores - THESE ARE FOR DATABASE!
-apiRouter.get('/results', async (_req, res) => {
+apiRouter.get('/allResults', async (_req, res) => {
   const results = await DB.getRecentResults();
   res.send(allResults);
 });
 
 // SubmitScore
-apiRouter.post('/result', async (req, res) => {
+apiRouter.post('/allResults', async (req, res) => {
   DB.addResult(req.body);
   const allResults = await DB.getRecentResults();
   res.send(allResults);

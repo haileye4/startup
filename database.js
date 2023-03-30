@@ -15,7 +15,7 @@ if (!userName) {
 const url = `mongodb+srv://${userName}:${password}@${hostname}`;
 
 const client = new MongoClient(url);
-const resultCollection = client.db('startup').collection('result');
+const resultCollection = client.db('startup').collection('allResults');
 
 function addResult(result) {
   resultCollection.insertOne(result);
