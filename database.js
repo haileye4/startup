@@ -15,20 +15,19 @@ if (!userName) {
 const url = `mongodb+srv://${userName}:${password}@${hostname}`;
 
 const client = new MongoClient(url);
-const scoreCollection = client.db('startup').collection('result');
+const resultCollection = client.db('startup').collection('result');
 
-function addScore(score) {
-  scoreCollection.insertOne(score);
+function addResult(result) {
+  resultCollection.insertOne(result);
 }
 
-function getHighScores() {
-  const query = {score: {$gt: 0}};
+function getRecentResults() {
+  const query = {};
   const options = {
-    sort: {score: -1},
     limit: 10,
   };
-  const cursor = scoreCollection.find(query, options);
+  const cursor = resultCollection.find(query, options);
   return cursor.toArray();
 }
 
-module.exports = {addScore, getHighScores};
+module.exports = {addResult, getRecentResults};

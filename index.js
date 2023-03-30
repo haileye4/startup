@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const DB = require('./database.js');
 
 // The service port. In production the application is statically hosted by the service on the same port.
 const port = process.argv.length > 2 ? process.argv[2] : 4000;
@@ -15,13 +16,15 @@ var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
 // GetScores - THESE ARE FOR DATABASE!
-apiRouter.get('/results', (_req, res) => {
+apiRouter.get('/results', async (_req, res) => {
+  const results = await DB.getRecentResults();
   res.send(allResults);
 });
 
 // SubmitScore
-apiRouter.post('/result', (req, res) => {
-  allResults = updateResults(req.body, allResults);
+apiRouter.post('/result', async (req, res) => {
+  DB.addResult(req.body);
+  const allResults = await DB.getRecentResults();
   res.send(allResults);
 });
 
@@ -38,14 +41,19 @@ app.listen(port, () => {
 // updateScores considers a new score for inclusion in the high scores.
 // The high scores are saved in memory and disappear whenever the service is restarted.
 
-let allResults = [];
-function updateResults(newResult, allResults) {
+
+//THIS IS UNNEEDED UNDER HERE AFTER WE ADD MONGODB 
+
+// let allResults = [];
+// function updateResults(newResult, allResults) {
   
-  allResults.push(newResult);
+//   allResults.push(newResult);
 
-  if (allResults.length > 10) {
-    allResults.length = 10;
-  }
+//   if (allResults.length > 10) {
+//     allResults.length = 10;
+//   }
 
-  return allResults;
-}
+//   return allResults;
+// }
+
+
