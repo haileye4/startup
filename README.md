@@ -57,3 +57,32 @@ This assignment helped me understand the differences between the front end, and 
 It finally clicked when I was working through the video and setting up my service for my startup that express,static('public') will look into my public file and serve up my index.html file along with all my other ones!
 
 When I applied this to my startup, it was super cool to see how i could run node index.js in my console and serve up my service through the JavaScript interpretor.
+
+## Simon Database Assignment
+I learned a ton about applying mongoDB. Resetting my environment variables amd actually setting up my database took a bit of time to understand. 
+The .insertOne() function is very simple and easy to inset a json object into the mongo database. 
+
+## Simon Login Assignment
+This function  uses a secure cookie to store the authorization token for an authenticated user. 
+function setAuthCookie(res, authToken) {
+  res.cookie(authCookieName, authToken, {
+    secure: true,
+    httpOnly: true,
+    sameSite: 'strict',
+  });
+  
+  When a user is logged in, the cookie is added. When a user makes a secure request, the cookie is checked. When the user logs out, the cookie is removed.
+  
+  .findOne() is looking for a key in the mongo database... whileinsert.One() puts values into the mongo database.
+  bcrypt.hash(password, 10); -> This function is used to HASH our password we create...
+}
+
+
+## Simon WebSocket
+Websocket is how two clinets can interact with each other... force the browser to do something based on your backend... It's pinging the server to see if it has anything to say.
+1. Need to load in the webSocket package with const{ WebSocketServer } = require('ws')
+2. const wss = new WebSocketServer({ noServer: true }); this uses http, or the existing communication set up, to upgrade and create a new connection from that. Say you are going to create your own server.
+Simon uses WebSocket with peerproxy.js!  Simply just shows who is all playing and scoring at the same time... Prof. Jensen designed a class called PeerProxy which sets up the websocket, then makes and pushes connections with connectuons.push()... then bring in peer proxy into index.js and starts new PeerProxy(httpService);
+REMEMBER there are things in play.js to manipulate to broadcast a player's new score!
+
+1
