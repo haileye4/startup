@@ -9,6 +9,7 @@
 
     <script src="login.js"></script>
     <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="login.css" />
 
     <!-- Include bootstrap CSS framework -->
     <link
@@ -26,33 +27,74 @@
         <a class="navbar-brand text-light" href="#">Startup Game</a>
         <menu class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active text-light" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="play.html">Play</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="scores.html">Scores</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="about.html">About</a>
+            <a class="nav-link active" href="index.html">Home</a>
           </li>
         </menu>
       </nav>
     </header>
 
-    <main class="container-fluid text-center" id="jungleBackground">
+    <main class="container-fluid bg-secondary text-center" id="jungleBackground">
       <div>
-        <h1 class="text-dark container-fluid text-center" id="box1">Welcome to Jungle Mania!</h1>
-        <p class="text-light" style = "font-size: 1.6em;"><b>Login to play</b></p>
+        <h1>Welcome to Jungle Mania!</h1>
+        <!-- Displayed when needing authentication -->
+        <div id="loginControls" style="display: none">
+          <div class="input-group mb-3">
+            <span class="input-group-text">@</span>
+            <input
+              class="form-control"
+              type="text"
+              id="userName"
+              placeholder="your@email.com"
+            />
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text">🔒</span>
+            <input
+              class="form-control"
+              type="password"
+              id="userPassword"
+              placeholder="password"
+            />
+          </div>
+          <button type="button" class="btn btn-success" onclick="loginUser()">
+            Login
+          </button>
+          <button type="button" class="btn btn-success" onclick="createUser()">
+            Create
+          </button>
+        </div>
         
+        <!-- Displayed when ready to play -->
+        <div id="playControls" style="display: none">
+          <div id="playerName"></div>
+          <button type="button" class="btn btn-primary" onclick="play()">
+            Play
+          </button>
+          <button type="button" class="btn btn-secondary" onclick="logout()">
+            Logout
+          </button>
+        </div>
+      </div>
 
-        <form method="get" action="play.html">
-          <input type="text" id="name" placeholder="Your name here" />
-          <button type="submit" class="btn btn-success" onclick="login()">Login</button>
-        </form>
+      <!-- Error dialog -->
+      <div class="modal fade" id="msgModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content text-dark">
+            <div class="modal-body">error message here</div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
+
 
     <footer class="bg-dark text-dark text-muted sticky-bottom">
       <div class="container-fluid text-light" style="background-color: #034e00;">
@@ -64,6 +106,13 @@
         >
       </div>
     </footer>
+
+    <script src="login.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
 
   </body>
 

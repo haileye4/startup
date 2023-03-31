@@ -1,4 +1,6 @@
 const {MongoClient} = require('mongodb');
+const bcrypt = require('bcrypt');
+const uuid = require('uuid');
 
 const userName = process.env.MONGOUSER;
 const password = process.env.MONGOPASSWORD;
@@ -15,7 +17,31 @@ if (!userName) {
 const url = `mongodb+srv://${userName}:${password}@${hostname}`;
 
 const client = new MongoClient(url);
+const userCollection = client.db('startup').collection('user');
 const resultCollection = client.db('startup').collection('allResults');
+
+function getUser(email) {
+    return userCollection.findOne({ email: email });
+}
+  
+function getUserByToken(token) {
+    return userCollection.findOne({ token: token });
+}
+  
+async function createUser(email, password) {
+    // Hash the password before we insert it into the database
+    const passwordHash = await bcrypt.hash(password, 10);
+  
+    const user = {
+      email: email,
+      password: passwordHash,
+      token: uuid.v4(),
+    };
+    await userCollection.insertOne(user);
+  
+    return user;
+}
+  
 
 function addResult(result) {
   resultCollection.insertOne(result);
@@ -23,11 +49,11 @@ function addResult(result) {
 
 function getRecentResults() {
   const query = {};
-  const options = {
+  const options = { 
     limit: 10,
   };
   const cursor = resultCollection.find(query, options);
   return cursor.toArray();
 }
 
-module.exports = {addResult, getRecentResults};
+module.exports = {addResult, getRecentResults, getUser, getUserByToken, createUser};
