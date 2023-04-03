@@ -11,4 +11,17 @@ function retrieveResult() {
 
   }
 
-  retrieveResult();
+    // Event messages
+const GameEndEvent = 'gameEnd';
+const GameStartEvent = 'gameStart';
+
+function reset() {
+  // Let other players know a new game has started
+  this.broadcastEvent(this.getPlayerName(), GameStartEvent, {});
+}
+
+function getPlayerName() {
+  return localStorage.getItem('userName') ?? 'Mystery player';
+}
+
+retrieveResult();

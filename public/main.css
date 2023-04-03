@@ -15,6 +15,18 @@
   opacity: 0.7;
 }
 
+.event {
+  color: rgb(69, 69, 69);
+}
+
+.player-event {
+  color: rgb(165, 220, 235);
+}
+
+.system-event {
+  color: rgb(221, 148, 40);
+}
+
 #random {
   font-size: 1.2em;
 }

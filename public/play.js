@@ -1,9 +1,15 @@
-   class Game {
+  // Event messages
+const GameEndEvent = 'gameEnd';
+const GameStartEvent = 'gameStart';
+
+  class Game {
+    socket;
   
     constructor() {
       const playerNameEl = document.querySelector('.player-name');
       playerNameEl.textContent = this.getPlayerName();
       console.log(playerNameEl);
+      this.configureWebSocket();
     }
   
     getPlayerName() {
@@ -25,6 +31,10 @@
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify(newResult),
       });
+
+      // Let other players know the game has concluded
+      this.broadcastEvent(userName, GameEndEvent, newResult);
+
 
       // Store what the service gave us as the high scores
       const results = await response.json();
