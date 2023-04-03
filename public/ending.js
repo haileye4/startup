@@ -1,4 +1,8 @@
 function retrieveResult() {
+    const playerNameEl = document.querySelector('.player-name');
+    playerNameEl.textContent = this.getPlayerName();
+    console.log(playerNameEl);
+
     const resultsText = localStorage.getItem('allResults');
     allResults = JSON.parse(resultsText);
     lastResult = allResults[allResults.length - 1];
