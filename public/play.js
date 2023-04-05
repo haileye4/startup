@@ -81,7 +81,7 @@ const GameStartEvent = 'gameStart';
     this.socket.onmessage = async (event) => {
       const msg = JSON.parse(await event.data.text());
       if (msg.type === GameEndEvent) {
-        this.displayMsg('player', msg.from, `scored ${msg.value.score}`);
+        this.displayMsg('player', msg.from, ` ${msg.value.result}`);
       } else if (msg.type === GameStartEvent) {
         this.displayMsg('player', msg.from, `started a new game`);
       }
