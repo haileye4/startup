@@ -41,6 +41,7 @@ const GameStartEvent = 'gameStart';
       this.updateResultsLocal(newResult);
     }
 
+    localStorage.setItem('PersonalResult', JSON.stringify(newResult));
     window.location.href= 'ending.html';
     }
   
@@ -64,6 +65,7 @@ const GameStartEvent = 'gameStart';
       }
 
       localStorage.setItem('allResults', JSON.stringify(allResults));
+
     }
 
     broadcastBro() {
@@ -87,6 +89,7 @@ const GameStartEvent = 'gameStart';
       const msg = JSON.parse(await event.data.text());
       if (msg.type === GameEndEvent) {
         this.displayMsg('player', msg.from, ` ${msg.value.result}`);
+        //SET LOCAL VARIABLE TO THIS RESULT...
       } else if (msg.type === GameStartEvent) {
         this.displayMsg('player', msg.from, `started a new game`);
       }

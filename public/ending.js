@@ -3,9 +3,8 @@ function retrieveResult() {
     playerNameEl.textContent = this.getPlayerName();
     console.log(playerNameEl);
 
-    const resultsText = localStorage.getItem('allResults');
-    allResults = JSON.parse(resultsText);
-    lastResult = allResults[allResults.length - 1];
+    const resultsText = localStorage.getItem('PersonalResult');
+    lastResult = JSON.parse(resultsText);
 
     const section = document.querySelector('#result');
     const resultEl = document.createElement('p');
