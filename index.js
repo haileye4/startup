@@ -90,7 +90,7 @@ apiRouter.get('/allResults', async (_req, res) => {
 });
 
 // SubmitScore
-apiRouter.post('/result', async (req, res) => {
+apiRouter.post('/allResult', async (req, res) => {
   DB.addResult(req.body);
   const allResults = await DB.getRecentResults();
   res.send(allResults);

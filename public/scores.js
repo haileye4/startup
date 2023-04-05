@@ -7,7 +7,7 @@ async function loadResults() {
   
     try {
       // Get the latest high scores from the service
-      const response = await fetch('/api/results');
+      const response = await fetch('/api/allResults');
       results = await response.json();
   
       // Save the scores in case we go offline in the future
@@ -19,6 +19,8 @@ async function loadResults() {
         results = JSON.parse(resultsText);
       }
     }
+
+    //fetch allResults in front end and whatever promise you get back set local storage variable to that
 
     displayResults(results);
   }

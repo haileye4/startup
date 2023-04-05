@@ -49,6 +49,7 @@ function addResult(result) {
 
 function getRecentResults() {
   const query = {};
+  //mongo of chat gpt how to show up recent 10 in descending date order
   const options = { 
     limit: 10,
   };

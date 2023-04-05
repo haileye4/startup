@@ -17,7 +17,7 @@ const GameStartEvent = 'gameStart';
     }
 
     pressButton(result) {
-      game.saveEnding(result);
+      this.saveEnding(result);
     }
 
     async saveEnding(result) {
@@ -26,7 +26,7 @@ const GameStartEvent = 'gameStart';
       const newResult = { name: userName, result: result, date: date };
 
     try {
-      const response = await fetch('/api/result', {
+      const response = await fetch('/api/allResults', { 
         method: 'POST',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify(newResult),
@@ -35,14 +35,13 @@ const GameStartEvent = 'gameStart';
       // Let other players know the game has concluded
       this.broadcastEvent(userName, GameEndEvent, newResult);
 
-
-      // Store what the service gave us as the high scores
-      const results = await response.json();
-      localStorage.setItem('allResults', JSON.stringify(results));
     } catch {
+
       // If there was an error then just track scores locally
       this.updateResultsLocal(newResult);
     }
+
+    window.location.href= 'ending.html';
     }
   
 
@@ -65,6 +64,12 @@ const GameStartEvent = 'gameStart';
       }
 
       localStorage.setItem('allResults', JSON.stringify(allResults));
+    }
+
+    broadcastBro() {
+      // Let other players know a new game has started
+      const userName = this.getPlayerName();
+      this.broadcastEvent(userName, GameStartEvent, {});
     }
 
     // Functionality for peer communication using WebSocket
