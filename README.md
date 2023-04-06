@@ -102,4 +102,4 @@ const app = express();
     limit: 10,
     sort: {date: -1},
   };
-  The code anbove allows me to sort my results from the most recent to the oldest
+  The code above allows me to sort my results from the most recent to the oldest
