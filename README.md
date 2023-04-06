@@ -85,7 +85,7 @@ Websocket is how two clinets can interact with each other... force the browser t
 Simon uses WebSocket with peerproxy.js!  Simply just shows who is all playing and scoring at the same time... Prof. Jensen designed a class called PeerProxy which sets up the websocket, then makes and pushes connections with connectuons.push()... then bring in peer proxy into index.js and starts new PeerProxy(httpService);
 REMEMBER there are things in play.js to manipulate to broadcast a player's new score!
 
-##Startup Service
+## Startup Service
 Super important to set up environment variables locally with your password and username and direction to mongo database!
 MongoDB will build data collections for you when you do const userCollection = client.db('startup').collection('user');
 
