@@ -130,7 +130,8 @@ const app = express();
         <Route path='*' element={<NotFound />} />
       </Routes>
       
-   The code: <NavLink className='nav-link' to='play'>
+   The code: 
+   <NavLink className='nav-link' to='play'>
                   Play
-                </NavLink> 
+             </NavLink> 
    allows you to toggle through different navigations and change the main body of the page you are on.
